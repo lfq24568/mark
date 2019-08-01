@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: 李方强
+ * @Date: 2019-08-01 14:53:15
+ * @LastEditTime: 2019-08-01 17:45:44
+ * @LastEditors: 李方强
+ */
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
@@ -11,8 +18,9 @@ class App extends Component {
             <BrowserRouter>
             {/* 只匹配其中的某一个模块 */}
                 <Switch>
-                    <Route path='/' component={Login}></Route>
-                    <Route path='/admin' component={Admin}></Route>
+                    <Route path='/login' component={Login} />
+                    <Route path='/admin' component={Admin} />
+                    <Route path="/" component={Login} exact />
                 </Switch>
             </BrowserRouter>
         )
